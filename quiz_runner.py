@@ -8,11 +8,22 @@ from question import Question
 
 # Initialize autoreset of colors 
 init(autoreset=True)
+
 # Initialize QuizRunner class
 class QuizRunner:
     def __init__(self, reader):
         self.reader = reader
         self.score = 0
 
-
 # Methhod for asking the questions
+    def ask_question(self, question):
+            print(Style.BRIGHT + Fore.CYAN + "\n" + question.text + "\n")
+            
+            for letter in ['A', 'B', 'C', 'D']:
+               print(Style.BRIGHT + Fore.MAGENTA + f"{letter}. {question.options[letter]}")
+           
+            while True:
+                answer = input(Style.BRIGHT + Fore.CYAN + "\nEnter your answer [A/B/C/D]: ").strip().upper()
+                if answer in ['A', 'B', 'C', 'D']:
+                    break
+
