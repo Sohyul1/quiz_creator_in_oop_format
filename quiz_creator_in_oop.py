@@ -15,5 +15,14 @@ class QuestionCreator:
             'C': input("Letter 'C' value: \n"),    
             'D': input("Letter 'D' value: \n")
         }
+        # Loop until the user enters a valid correct answer (A, B, C, or D)
+        while True:
+            correct_answer = input("Letter of the right answer [A/B/C/D]: \n").strip().upper()
+            if correct_answer in choices:
+                break  
+            else:
+                print("Invalid input. Please enter A, B, C, or D.\n")
+        return Question(text, choices, correct_answer)
+
 
 # Method for saving as a text file 
