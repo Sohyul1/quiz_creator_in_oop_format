@@ -3,7 +3,7 @@ from question import Question
 
 # Initialize quiz creator
 class QuestionCreator:
-    def __init__(self, filename="questions.txt"):
+    def __init__(self, filename="oop_questions.txt"):
         self.filename = filename
 
 # Make a method for inputting the quetions, choices and right answer
@@ -38,3 +38,7 @@ class QuestionCreator:
             if not again.startswith("y"):
                 print("Quiz creation completed!\n")
                 break
+
+if __name__ == "__main__":
+    creator = QuestionCreator()
+    creator.run()
