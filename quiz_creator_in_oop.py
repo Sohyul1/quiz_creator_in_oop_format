@@ -24,5 +24,7 @@ class QuestionCreator:
                 print("Invalid input. Please enter A, B, C, or D.\n")
         return Question(text, choices, correct_answer)
 
-
 # Method for saving as a text file 
+    def save_question(self, question):  
+        with open(self.filename, "a") as file:
+            file.write(question.format_for_file())
