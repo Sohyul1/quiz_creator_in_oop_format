@@ -3,7 +3,7 @@ from question import Question
 
 # Initialize quiz creator
 class QuestionCreator:
-    def __init__(self, filename= "questions.txt"):
+    def __init__(self, filename="questions.txt"):
         self.filename = filename
 
 # Make a method for inputting the quetions, choices and right answer
