@@ -28,3 +28,13 @@ class QuestionCreator:
     def save_question(self, question):  
         with open(self.filename, "a") as file:
             file.write(question.format_for_file())
+
+# A method for running the program again
+    def run(self):
+        while True:
+            question = self.create_question()
+            self.save_question(question)
+            again = input("Enter another question? [yes/no]: \n").strip().lower()
+            if not again.startswith("y"):
+                print("Quiz creation completed!\n")
+                break
