@@ -43,5 +43,12 @@ class QuizRunner:
             # Ask each question one by one
             for question in questions:
                 self.ask_question(question)
+
+            print(Style.BRIGHT + Fore.MAGENTA + f"\nQuiz completed! Your score: {self.score}/{len(questions)}")
+
+            again = input(Style.BRIGHT + Fore.CYAN + "\nPlay again? (yes/no): ").strip().lower()
+            if not again.startswith("y"):
+                print("Thanks for playing!")
+                break
         
 
