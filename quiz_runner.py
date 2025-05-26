@@ -39,7 +39,7 @@ class QuizRunner:
             self.score = 0  
             questions = self.reader.get_questions()  
             random.shuffle(questions)  
-
+            
             # Ask each question one by one
             for question in questions:
                 self.ask_question(question)
