@@ -14,5 +14,5 @@ class Question:
         lines = [f"Question: {self.text}"]
         for letter in ['A', 'B', 'C', 'D']:
             lines.append(f"{letter}. {self.option[letter]}")
-        lines.append(f"Answer: {self.correct_answer}")
+        lines.append(f"Answer: {self.correct_answer}\n")
         return "\n".join(lines)
