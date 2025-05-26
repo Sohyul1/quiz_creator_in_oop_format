@@ -16,12 +16,15 @@ class QuizReader:
         while line_count < len(lines):
             if lines[line_count].startswith("Question:"):
                 question_text = lines[line_count].strip()
-                choice_a = lines[line_count + 1].strip()
-                choice_b = lines[line_count + 2].strip()
-                choice_c = lines[line_count + 3].strip()
-                choice_d = lines[line_count + 4].strip()
-                correct_answer = lines[line_count + 5].strip(".").replace("Answer:", "").strip()
-                questions_and_choices.append((question_text, [choice_a, choice_b, choice_c, choice_d], correct_answer))
+                choices = {
+                    'A': lines[line_count + 1].replace("A.", "").strip(),
+                    'B': lines[line_count + 2].replace("B.", "").strip(),
+                    'C': lines[line_count  + 3].replace("C.", "").strip(),
+                    'D': lines[line_count + 4].replace("D.", "").strip()
+                }
+
+                correct_answer = lines[line_count + 5].replace("Answer:", "").strip()
+                questions_and_choices.append(Question(question_text, choices, correct_answer))
             line_count += 6
             
         return questions_and_choices
