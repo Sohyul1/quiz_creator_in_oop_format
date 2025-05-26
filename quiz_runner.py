@@ -27,3 +27,11 @@ class QuizRunner:
                 if answer in ['A', 'B', 'C', 'D']:
                     break
 
+            if question.is_correct(answer):
+                print(Style.BRIGHT + Fore.GREEN + "Correct!")
+                self.score += 1
+            else:
+                print(Style.BRIGHT + Fore.RED + f"Incorrect. The correct answer was {question.correct_answer}.")
+
+        
+
