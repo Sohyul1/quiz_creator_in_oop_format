@@ -13,6 +13,6 @@ class Question:
     def format_for_file(self):
         lines = [f"Question: {self.text}"]
         for letter in ['A', 'B', 'C', 'D']:
-            lines.append(f"{letter}. {self.option[letter]}")
+            lines.append(f"{letter}. {self.options[letter]}")
         lines.append(f"Answer: {self.correct_answer}\n")
         return "\n".join(lines)
