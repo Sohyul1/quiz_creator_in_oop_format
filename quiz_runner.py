@@ -33,5 +33,15 @@ class QuizRunner:
             else:
                 print(Style.BRIGHT + Fore.RED + f"Incorrect. The correct answer was {question.correct_answer}.")
 
+    # Method for running the quiz
+    def run_quiz(self):
+        while True:
+            self.score = 0  
+            questions = self.reader.get_questions()  
+            random.shuffle(questions)  
+
+            # Ask each question one by one
+            for question in questions:
+                self.ask_question(question)
         
 
