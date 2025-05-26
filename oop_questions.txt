@@ -1,6 +1,30 @@
-hehe
-A. haha
-B. huhu
-C. hihi
-D. hoho
+Question: What is the chemical symbol for gold?
+A. Au
+B. Ag
+C. Pb
+D. Fe
+Answer: A
+Question: Who was the first President of the Philippines?
+A. Ferdinand Marcos
+B. Manuel L. Quezon
+C. Emilio Aguinaldo
+D. Jose P. Laurel
 Answer: C
+Question: Which programming language is known for its simplicity and readability?
+A. Java
+B. C++
+C. Banjo
+D. Python 
+Answer: D
+Question: What is the capital of Japan?
+A. Tokyo
+B. Manila
+C. Beijing
+D. Bangkok 
+Answer: A
+Question: Which instrument typically has six strings?
+A. Violib
+B. Guitar
+C. Ukulele
+D. Octavina 
+Answer: B
